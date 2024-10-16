@@ -9,6 +9,12 @@ function stringCalculator(input) {
         input = parts.slice(1).join("\n"); //this line is to keep below code consistent
     }
     const numbers = input.split(delimiter).map(Number);
+
+    const negatives = numbers.filter(n => n < 0);
+    
+    if (negatives.length) {
+      throw new Error(`negative numbers not allowed: ${negatives.join(",")}`);
+    }
     return numbers.reduce((sum, c) => sum + c , 0);
 }
 
