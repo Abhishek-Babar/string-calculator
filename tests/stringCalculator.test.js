@@ -24,4 +24,12 @@ describe('String Calculator', () => {
     it('should handle multiple new lines as delimiters', () => {
         expect(stringCalculator("2\n4\n6,7")).toBe(19);
     });
+
+    it('should support custom delimiters', () => {
+        expect(stringCalculator("//;\n1;2")).toBe(3);
+    });
+
+    it('should support custom delimiters', () => {
+        expect(stringCalculator("//*\n3\n2*5")).toBe(10);
+    });
 });
