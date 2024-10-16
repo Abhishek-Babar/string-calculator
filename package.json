@@ -1,0 +1,22 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "string calculator using tdd method",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishek-Babar/string-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhishek-Babar/string-calculator/issues"
+  },
+  "homepage": "https://github.com/Abhishek-Babar/string-calculator#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
