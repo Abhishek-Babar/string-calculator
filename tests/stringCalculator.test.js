@@ -29,7 +29,12 @@ describe('String Calculator', () => {
         expect(stringCalculator("//;\n1;2")).toBe(3);
     });
 
-    it('should support custom delimiters', () => {
+    it('should support custom delimiters special characters', () => {
         expect(stringCalculator("//*\n3\n2*5")).toBe(10);
+    });
+
+    it('should throw an error for negative numbers', () => {
+        expect(() => stringCalculator("1,-2,3")).toThrow("negative numbers not allowed: -2");
+        expect(() => stringCalculator("//;\n1;-2;-3")).toThrow("negative numbers not allowed: -2,-3");
     });
 });
